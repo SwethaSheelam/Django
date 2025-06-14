@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from home.views import index,about,contact
+from home.views import dynamic_url, index,about,contact
 
 
 urlpatterns = [
     path('',index,name='index'),
+    path('<id>/',dynamic_url,name='dynamic_url'),
     path('about-coding-brains/',about,name='about'),
     path('contact-us/',contact,name='contact'),
     path('admin/', admin.site.urls),
