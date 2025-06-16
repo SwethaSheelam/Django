@@ -6,9 +6,21 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>Welcome to django project 😊</h1>
+    <h1>Welcome to django project 😊 Lets Know your Lucky Number</h1>
+    <h2>Your Lucky Number is: -{{lucky_number}}</h2>
+
+    <hr>
+
+   
+    {% for Veggies in Veggies%}
+     <li>
+    {{Veggies}}
+    
+    </li>
+    {%endfor%}
+    
       <p>
-        <a href="/">Home</a>
+        
         <a href={% url 'about' %}>About❤️</a>
         <a href={% url 'contact'%}>Contact📞</a>
     </p>
