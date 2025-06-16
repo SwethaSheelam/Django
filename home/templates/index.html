@@ -15,14 +15,27 @@
     {% for Veggies in Veggies%}
      <li>
     {{Veggies}}
-    
-    </li>
+     </li>
     {%endfor%}
+    <hr>
+    <br>
+    <h2>Cities Information</h2>
+  
+       <h2>S.No  | Name  | Population | country </h2>
+         {%for city in cities%}
+             <p>{{forloop.counter}}|{{city.name}} | {{city.population}} | {{city.country}}</p>
+         {%endfor%}
     
       <p>
-        
         <a href={% url 'about' %}>About❤️</a>
         <a href={% url 'contact'%}>Contact📞</a>
-    </p>
+     </p>
+
+
+
+
+
 </body>
 </html>
+
+

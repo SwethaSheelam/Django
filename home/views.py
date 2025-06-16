@@ -5,7 +5,12 @@ import random
 def index(request):
     lucky_number=random.randint(50,999)
     Veggies=["potato 🥔","tomato 🍅","chilly 🌶️","beans 🫛","peas 🫘"]
-    context={"lucky_number":lucky_number,"Veggies":Veggies}
+    cities=[{"name":"Japan","population": "37,036,200","country":"india"},
+           {"name":"Tokyo","population": "37,036,200","country":"india"},
+           {"name":"Tokyo","population": "37,036,200","country":"india"}
+    ]
+ 
+    context={"lucky_number":lucky_number,"Veggies":Veggies,"cities":cities}
     return render(request,'index.html',context)
 
 def about(request):
