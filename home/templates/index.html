@@ -1,8 +1,9 @@
 
 {% extends "base.html"%}
 {%block start%}
+
     <h1>Welcome to django project 😊 Lets Know your Lucky Number</h1>
-    <h2>Your Lucky Number is: -{{lucky_number}}</h2>
+    <h2>Your Lucky Number is: - <button class="btn-success">{{lucky_number}}</button></h2>
 
     <hr>
 
@@ -14,7 +15,7 @@
     {%endfor%}
     <hr>
     <br>
-    <h2>Cities Information</h2>
+    <h2>  Cities Information </h2>
   
        <h2>S.No  | Name  | Population | country </h2>
          {%for city in cities%}
@@ -23,8 +24,8 @@
     <br>
 
       <p>
-        <a href={% url 'about' %}>About❤️</a>
-        <a href={% url 'contact'%}>Contact📞</a>
+        <a href={% url 'about' %}>About ❤️</a>
+        <a href={% url 'contact'%}>Contact 📞</a>
      </p>
 {% endblock %}
 

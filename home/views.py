@@ -23,6 +23,8 @@ def dynamic_url(request,id):
       print(f"This is the Value we got from func-> {id}")
       return render(request,'dynamic_url.html',context={"id":id,"name":"Swetha"})
   
+def project(request):
+      return render(request,'project.html')
   
   
   
