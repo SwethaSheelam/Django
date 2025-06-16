@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
+
+{% extends "base.html"%}
+{%block start%}
     <h1>Welcome to django project 😊 Lets Know your Lucky Number</h1>
     <h2>Your Lucky Number is: -{{lucky_number}}</h2>
 
@@ -25,17 +20,17 @@
          {%for city in cities%}
              <p>{{forloop.counter}}|{{city.name}} | {{city.population}} | {{city.country}}</p>
          {%endfor%}
-    
+    <br>
+
       <p>
         <a href={% url 'about' %}>About❤️</a>
         <a href={% url 'contact'%}>Contact📞</a>
      </p>
+{% endblock %}
 
 
 
 
 
-</body>
-</html>
 
 
