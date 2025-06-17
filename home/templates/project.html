@@ -23,7 +23,7 @@
             function checkLuck(){
 
                 var input=document.getElementById('input')
-                if(input == " ")
+                if(input == "")
                 {
                     alert("input cannot be blank")
                     return
@@ -40,16 +40,17 @@
                     alert("WoW!! You Won")
                     window.location.reload()
                     return
+                }
+                else if(lucky_number < input.value){
+                      alert(`Sorry, Your guess is too big\n Try Again ${count} times`)
+                      return
                 }else if(lucky_number > input.value){
-                      alert(`Sorry, Your guess is too small\n Try Again ${count} times`)
+                      alert(`Sorry, Your guess is too small\n Try Again with ${count} tries`)
                       input.value= ""
                       return
                     }
                    
-                else if(lucky_number < input.value){
-                      alert(`Sorry, Your guess is too big\n Try Again ${count} times`)
-                      return
-                }
+               
             
             }
             
